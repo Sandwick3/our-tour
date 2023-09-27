@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+/* src/App.css */
+.app {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3em;
+  align-items: flex-start;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box {
+  width: 25em; /* Fixed width for the box */
+  height: auto; /* Allow the box to grow vertically based on content */
+  background-color: #ffffff;
+  color: #4a1a1a;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  font-size: 20px;
+  border-radius: 0.3em;
+  overflow: hidden; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a drop shadow */
 }
 
-.App-link {
-  color: #61dafb;
+.box-image {
+
+  object-fit: fill 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.box + .box {
+  margin-left: -7em;
+}
+
+.box-title {
+  padding-left: .5em;
+  font-size: 20px;
+}
+
+.image-container {
+  flex: 1;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none; 
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  border: none; 
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.bold-text {
+  text-align: center; 
+  font-weight: bold;
+  margin: .3em;
+  
+}
+
+.expand-button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: #1b980b;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+.details {
+  display: block;
+  overflow: hidden;
+  white-space: normal; /* Allow text to wrap */
+  transition: max-height 0.3s ease-in-out; 
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 16px;
+
+}
+
+.expanded .details {
+  max-height: none; /* Remove maximum height when expanded */
 }
