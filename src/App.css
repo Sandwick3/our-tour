@@ -8,8 +8,8 @@
 }
 
 .box {
-  width: 25em; /* Fixed width for the box */
-  height: auto; /* Allow the box to grow vertically based on content */
+  width: 25em;
+  height: auto;
   background-color: #ffffff;
   color: #4a1a1a;
   display: flex;
@@ -17,22 +17,20 @@
   justify-content: flex-start;
   font-size: 20px;
   border-radius: 0.3em;
-  overflow: hidden; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a drop shadow */
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .box-image {
-
-  object-fit: fill 
+  object-fit: fill;
 }
-
 
 .box + .box {
   margin-left: -7em;
 }
 
 .box-title {
-  padding-left: .5em;
+  text-align: center;
   font-size: 20px;
 }
 
@@ -41,16 +39,16 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
-  border: none; 
+  border: none;
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
   display: block;
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
-  border: none; 
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .content-container {
@@ -60,10 +58,9 @@ img {
 }
 
 .bold-text {
-  text-align: center; 
+  text-align: center;
   font-weight: bold;
   margin: .3em;
-  
 }
 
 .expand-button {
@@ -79,14 +76,41 @@ img {
 .details {
   display: block;
   overflow: hidden;
-  white-space: normal; /* Allow text to wrap */
-  transition: max-height 0.3s ease-in-out; 
+  white-space: normal;
+  transition: max-height 0.3s ease-in-out;
   padding-left: 1em;
   padding-right: 1em;
   font-size: 16px;
-
 }
 
 .expanded .details {
-  max-height: none; /* Remove maximum height when expanded */
+  max-height: none;
 }
+
+.close-button {
+  background-color: #ffffff;
+  color: #b7b7b7;
+  border: #000000 1px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-button:hover {
+  background-color: #ebe7eb;
+}
+
+.green-rectangle {
+  background-color: #4CAF50;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+

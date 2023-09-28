@@ -26,7 +26,13 @@
     -->
     <title>React App</title>
   </head>
+
   <body>
+    <!-- Add the header title here -->
+    <div class="header">
+      <h1>My Tour</h1>
+    </div>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,5 +45,20 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <style>
+      /* CSS for centering the header title */
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      h1 {
+        font-weight: 300;
+        font-size: 36px;
+      }
+    </style>
   </body>
 </html>
